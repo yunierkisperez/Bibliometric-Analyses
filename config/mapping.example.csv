@@ -1,0 +1,5 @@
+institution_id,name,id-paper,color_hex
+EXAMPLE_01,Fictitious University 01,U-01,#1F4E79
+EXAMPLE_02,Fictitious University 02,U-02,#2E75B6
+EXAMPLE_03,Fictitious University 03,U-03,#5B9BD5
+NATIONAL,Fictitious focal aggregate,National,#111111

@@ -1,0 +1,11 @@
+* text=auto eol=lf
+*.csv -text
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.svg text eol=lf
+*.cff text eol=lf
+*.yml text eol=lf
+
+assets/fonts/source_sans_3/*.ttf binary
+assets/fonts/source_sans_3/LICENSE.md -text

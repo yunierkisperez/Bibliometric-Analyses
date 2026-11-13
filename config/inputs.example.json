@@ -1,0 +1,19 @@
+{
+  "inputs": {
+    "2011": "/private/scopus/2011_abstracts.json",
+    "2012": "/private/scopus/2012_abstracts.json",
+    "2013": "/private/scopus/2013_abstracts.json",
+    "2014": "/private/scopus/2014_abstracts.json",
+    "2015": "/private/scopus/2015_abstracts.json",
+    "2016": "/private/scopus/2016_abstracts.json",
+    "2017": "/private/scopus/2017_abstracts.json",
+    "2018": "/private/scopus/2018_abstracts.json",
+    "2019": "/private/scopus/2019_abstracts.json",
+    "2020": "/private/scopus/2020_abstracts.json",
+    "2021": "/private/scopus/2021_abstracts.json",
+    "2022": "/private/scopus/2022_abstracts.json",
+    "2023": "/private/scopus/2023_abstracts.json",
+    "2024": "/private/scopus/2024_abstracts.json",
+    "2025": "/private/scopus/2025_abstracts.json"
+  }
+}

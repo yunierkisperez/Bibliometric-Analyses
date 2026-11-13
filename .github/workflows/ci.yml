@@ -1,0 +1,40 @@
+name: Software tests and distribution integrity
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  synthetic:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.12', '3.13.5']
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - name: Install native Cairo
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes libcairo2
+      - name: Install recorded Python dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Check code distribution and file integrity
+        run: python tools/check_repository.py
+      - name: Check runtime and native Cairo
+        run: python tools/check_installation.py
+      - name: Run synthetic unit controls
+        run: python -m unittest discover -s tests -v
+      - name: Check independent command help
+        run: python tools/check_entrypoints.py

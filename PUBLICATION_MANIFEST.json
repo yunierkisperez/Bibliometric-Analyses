@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "repository": "Bibliometric-Analyses",
+  "owner": "yunierkisperez",
+  "software_title": "Institutional bibliometrics reproducibility (Ecuador, 2011–2025)",
+  "code_license": "MIT",
+  "copyright_holder": "Yunierkis Pérez-Castillo",
+  "software_authors": [
+    "Yunierkis Pérez-Castillo"
+  ],
+  "release_date": "2026-11-13",
+  "version_doi": null,
+  "publication_metadata_complete": false,
+  "font_family": "Source Sans 3",
+  "font_license": "OFL-1.1",
+  "font_manifest": "assets/fonts/source_sans_3/font_manifest.json",
+  "font_bundle_verified": true,
+  "research_jsons_or_real_mapping_included": false,
+  "supplementary_tables_S1_S15_included": false,
+  "supplementary_tables_distribution": "Article supplementary material, external to this repository",
+  "validation_protocol": "VALIDATION.md"
+}

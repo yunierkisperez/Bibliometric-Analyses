@@ -1,0 +1,696 @@
+{
+  "1": {
+    "sources": [
+      "fig1_data_used.csv"
+    ],
+    "fields": [
+      {
+        "field": "id-paper"
+      },
+      {
+        "field": "year"
+      },
+      {
+        "field": "N_articles_attributed"
+      },
+      {
+        "field": "annual_growth_pct"
+      },
+      {
+        "field": "growth_D"
+      },
+      {
+        "field": "growth_deviation_side"
+      },
+      {
+        "field": "growth_deviation_strength"
+      }
+    ]
+  },
+  "2": {
+    "sources": [
+      "figure2_robust_d_temporal_exposure_profiles_data_used.csv"
+    ],
+    "fields": [
+      {
+        "field": "id-paper"
+      },
+      {
+        "field": "analysis_year"
+      },
+      {
+        "field": "metric_key",
+        "translate": {
+          "CIS": "EC-CIS",
+          "IMFA_or_CIS": "IMFA or EC-CIS"
+        }
+      },
+      {
+        "field": "denominator_column",
+        "translate": {
+          "N_articles_attributed": "N articles attributed",
+          "CA_known": "CA known"
+        }
+      },
+      {
+        "field": "count"
+      },
+      {
+        "field": "denominator"
+      },
+      {
+        "field": "value_raw"
+      },
+      {
+        "field": "robust_D"
+      },
+      {
+        "field": "deviation_side"
+      },
+      {
+        "field": "deviation_strength"
+      }
+    ]
+  },
+  "3": {
+    "sources": [
+      "figureS2_persistent_robust_deviation_table.csv"
+    ],
+    "fields": [
+      {
+        "field": "id-paper"
+      },
+      {
+        "field": "metric_label"
+      },
+      {
+        "field": "deviation_years"
+      },
+      {
+        "field": "lower_deviation_years"
+      },
+      {
+        "field": "upper_signal_years"
+      },
+      {
+        "field": "extreme_deviation_years"
+      },
+      {
+        "field": "first_deviation_year"
+      },
+      {
+        "field": "last_deviation_year"
+      },
+      {
+        "field": "median_robust_D"
+      },
+      {
+        "field": "maximum_absolute_robust_D"
+      },
+      {
+        "field": "median_signed_gap_from_national_pp"
+      },
+      {
+        "field": "maximum_absolute_gap_from_national_pp"
+      },
+      {
+        "field": "deviation_year_list"
+      }
+    ]
+  },
+  "4": {
+    "sources": [
+      "fig3_compositional_change_three_state_NLO_union_accounting.csv"
+    ],
+    "fields": [
+      {
+        "field": "id-paper"
+      },
+      {
+        "field": "interval_type"
+      },
+      {
+        "field": "display_period"
+      },
+      {
+        "field": "classification"
+      },
+      {
+        "field": "positive_start"
+      },
+      {
+        "field": "positive_end"
+      },
+      {
+        "field": "confirmed_negative_start"
+      },
+      {
+        "field": "confirmed_negative_end"
+      },
+      {
+        "field": "unknown_start"
+      },
+      {
+        "field": "unknown_end"
+      },
+      {
+        "field": "output_start"
+      },
+      {
+        "field": "output_end"
+      },
+      {
+        "field": "CA_coverage_start_pct"
+      },
+      {
+        "field": "CA_coverage_end_pct"
+      },
+      {
+        "field": "indicator_rate_start_pct"
+      },
+      {
+        "field": "indicator_rate_end_pct"
+      }
+    ]
+  },
+  "5": {
+    "sources": [
+      "fig3_compositional_change_phase_accounting_national.csv",
+      "fig3_compositional_change_annual_transition_accounting_national.csv"
+    ],
+    "fields": [
+      {
+        "field": "phase"
+      },
+      {
+        "field": "display_period"
+      },
+      {
+        "field": "metric_label"
+      },
+      {
+        "field": "output_start"
+      },
+      {
+        "field": "output_end"
+      },
+      {
+        "field": "indicator_positive_start"
+      },
+      {
+        "field": "indicator_positive_end"
+      },
+      {
+        "field": "remaining_output_start"
+      },
+      {
+        "field": "remaining_output_end"
+      },
+      {
+        "field": "net_output_change"
+      },
+      {
+        "field": "indicator_positive_change"
+      },
+      {
+        "field": "remaining_output_change"
+      },
+      {
+        "field": "indicator_output_share_start_pct",
+        "divide": 100
+      },
+      {
+        "field": "indicator_output_share_end_pct",
+        "divide": 100
+      },
+      {
+        "field": "indicator_share_of_net_change_pct",
+        "divide": 100
+      }
+    ]
+  },
+  "6": {
+    "sources": [
+      "fig3_compositional_change_phase_accounting_institutions.csv",
+      "fig3_compositional_change_annual_transition_accounting_institutions.csv"
+    ],
+    "fields": [
+      {
+        "field": "id-paper"
+      },
+      {
+        "field": "phase"
+      },
+      {
+        "field": "display_period"
+      },
+      {
+        "field": "metric_label"
+      },
+      {
+        "field": "output_start"
+      },
+      {
+        "field": "output_end"
+      },
+      {
+        "field": "indicator_positive_start"
+      },
+      {
+        "field": "indicator_positive_end"
+      },
+      {
+        "field": "remaining_output_start"
+      },
+      {
+        "field": "remaining_output_end"
+      },
+      {
+        "field": "net_output_change"
+      },
+      {
+        "field": "indicator_positive_change"
+      },
+      {
+        "field": "remaining_output_change"
+      },
+      {
+        "field": "indicator_output_share_start_pct",
+        "divide": 100
+      },
+      {
+        "field": "indicator_output_share_end_pct",
+        "divide": 100
+      },
+      {
+        "field": "indicator_share_of_net_change_pct",
+        "divide": 100
+      },
+      {
+        "field": "indicator_rate_change_pp"
+      },
+      {
+        "field": "robust_change_reference_median_pp"
+      },
+      {
+        "field": "robust_change_reference_scale_pp"
+      },
+      {
+        "field": "robust_change_reference_n"
+      },
+      {
+        "field": "robust_change_reference_status"
+      },
+      {
+        "field": "robust_change_D"
+      },
+      {
+        "field": "robust_change_signal_direction"
+      },
+      {
+        "field": "robust_change_signal_level"
+      }
+    ]
+  },
+  "7": {
+    "sources": [
+      "tables/section_4_4_complete_institution_year_panel_deidentified.csv",
+      "tables/section_4_4_national_concentration_series.csv"
+    ],
+    "fields": [
+      {
+        "field": "id-paper"
+      },
+      {
+        "field": "analysis_year"
+      },
+      {
+        "field": "output"
+      },
+      {
+        "field": "institution_authors"
+      },
+      {
+        "field": "CTA_1"
+      },
+      {
+        "field": "CTA_5"
+      },
+      {
+        "field": "CTA_10"
+      },
+      {
+        "field": "A_top50"
+      },
+      {
+        "field": "N_HPA_authors"
+      },
+      {
+        "field": "HPA_article_share_derived"
+      },
+      {
+        "field": "N_exposed_HPA_authors"
+      },
+      {
+        "field": "D_A_top50"
+      },
+      {
+        "field": "D_CTA_1"
+      },
+      {
+        "field": "D_CTA_10"
+      },
+      {
+        "field": "D_CTA_5"
+      },
+      {
+        "field": "D_level_CTA_1"
+      },
+      {
+        "field": "D_level_CTA_10"
+      },
+      {
+        "field": "D_level_CTA_5"
+      }
+    ]
+  },
+  "8": {
+    "sources": [
+      "tables/section_4_4_cumulative_selected_profiles_2025.csv"
+    ],
+    "fields": [
+      {
+        "field": "id-paper"
+      },
+      {
+        "field": "analysis_year"
+      },
+      {
+        "field": "author_rank"
+      },
+      {
+        "field": "cumulative_article_count"
+      },
+      {
+        "field": "cumulative_article_share"
+      },
+      {
+        "field": "A_top50"
+      },
+      {
+        "field": "output"
+      }
+    ]
+  },
+  "9": {
+    "sources": [
+      "tables/Table_S9_leading_author_persistence_deidentified.csv"
+    ],
+    "fields": [
+      {
+        "field": "sequence_record_id"
+      },
+      {
+        "field": "id-paper"
+      },
+      {
+        "field": "start_year"
+      },
+      {
+        "field": "end_year"
+      },
+      {
+        "field": "sequence_length_years"
+      },
+      {
+        "field": "median_CTA_1_pct"
+      },
+      {
+        "field": "HPA_years"
+      },
+      {
+        "field": "affiliation_exposed_HPA_years"
+      }
+    ]
+  },
+  "10": {
+    "sources": [
+      "tables/Table_S10_national_annual_sharing.csv"
+    ],
+    "fields": [
+      {
+        "field": "year"
+      },
+      {
+        "field": "total_unique_focal_attributed_articles"
+      },
+      {
+        "field": "articles_with_two_or_more_national_entities"
+      },
+      {
+        "field": "shared_percent"
+      },
+      {
+        "field": "articles_with_two_or_more_focal_institutions"
+      },
+      {
+        "field": "articles_with_nonfocal_ecuadorian_partner"
+      },
+      {
+        "field": "shared_with_other_focal_only_articles"
+      },
+      {
+        "field": "shared_with_nonfocal_only_articles"
+      },
+      {
+        "field": "shared_with_both_partner_scopes_articles"
+      },
+      {
+        "field": "distinct_author_only_articles"
+      },
+      {
+        "field": "same_author_only_articles"
+      },
+      {
+        "field": "both_articles"
+      },
+      {
+        "field": "undetermined_articles"
+      }
+    ]
+  },
+  "11": {
+    "sources": [
+      "tables/Table_S11_institution_annual_sharing.csv"
+    ],
+    "fields": [
+      {
+        "field": "year"
+      },
+      {
+        "field": "institution_code"
+      },
+      {
+        "field": "total_articles"
+      },
+      {
+        "field": "shared_articles"
+      },
+      {
+        "field": "shared_percent"
+      },
+      {
+        "field": "leading_partner_code"
+      },
+      {
+        "field": "leading_partner_type"
+      },
+      {
+        "field": "leading_partner_articles"
+      },
+      {
+        "field": "leading_partner_dependency_percent"
+      },
+      {
+        "field": "top_five_partner_union_articles"
+      },
+      {
+        "field": "top_five_partner_union_percent"
+      },
+      {
+        "field": "n_national_partners"
+      },
+      {
+        "field": "shared_CA_known_articles"
+      },
+      {
+        "field": "shared_NLO_articles"
+      },
+      {
+        "field": "shared_NLO_percent"
+      },
+      {
+        "field": "nonshared_CA_known_articles"
+      },
+      {
+        "field": "nonshared_NLO_articles"
+      },
+      {
+        "field": "shared_D"
+      },
+      {
+        "field": "shared_NLO_D"
+      }
+    ]
+  },
+  "12": {
+    "sources": [
+      "tables/Table_S12_pairwise_dependencies.csv"
+    ],
+    "fields": [
+      {
+        "field": "year"
+      },
+      {
+        "field": "institution_code"
+      },
+      {
+        "field": "partner_code"
+      },
+      {
+        "field": "partner_type"
+      },
+      {
+        "field": "focal_total_articles"
+      },
+      {
+        "field": "shared_articles"
+      }
+    ]
+  },
+  "13": {
+    "sources": [
+      "Table_S14_institution_year_concentration_robust_D.csv"
+    ],
+    "fields": [
+      {
+        "field": "year"
+      },
+      {
+        "field": "institution_code"
+      },
+      {
+        "field": "n_articles_attributed"
+      },
+      {
+        "field": "n_imfa_articles"
+      },
+      {
+        "field": "imfa_top1_partner_count"
+      },
+      {
+        "field": "imfa_top1_partner_share"
+      },
+      {
+        "field": "imfa_top5_union_count"
+      },
+      {
+        "field": "imfa_top5_union_share"
+      },
+      {
+        "field": "n_ec_cis_observed_nonfocal_publications"
+      },
+      {
+        "field": "ec_cis_top1_partner_count"
+      },
+      {
+        "field": "ec_cis_top1_partner_share"
+      },
+      {
+        "field": "ec_cis_top5_union_count"
+      },
+      {
+        "field": "ec_cis_top5_union_share"
+      },
+      {
+        "field": "imfa_top1_D"
+      },
+      {
+        "field": "ec_cis_top1_D"
+      },
+      {
+        "field": "imfa_top5_D"
+      },
+      {
+        "field": "ec_cis_top5_D"
+      }
+    ]
+  },
+  "14": {
+    "sources": [
+      "Table_S20_affiliation_structures_2025_updated.csv"
+    ],
+    "fields": [
+      {
+        "field": "year"
+      },
+      {
+        "field": "institution_code"
+      },
+      {
+        "field": "partner_intersection"
+      },
+      {
+        "field": "partner_union"
+      },
+      {
+        "field": "partner_jaccard"
+      },
+      {
+        "field": "author_partner_intersection"
+      },
+      {
+        "field": "author_partner_union"
+      },
+      {
+        "field": "author_partner_jaccard"
+      },
+      {
+        "field": "n_ec_cis_authors_ge2_nonfocal_with_resolved_partner"
+      },
+      {
+        "field": "n_ec_cis_authors_single_recurrent_partner"
+      },
+      {
+        "field": "ec_cis_single_recurrent_partner_share"
+      }
+    ]
+  },
+  "15": {
+    "sources": [
+      "Figure7_institution_year_exposure_signal_matrix_2011_2025_indicator_details.csv"
+    ],
+    "fields": [
+      {
+        "field": "analysis_year"
+      },
+      {
+        "field": "institution_code"
+      },
+      {
+        "field": "metric_key"
+      },
+      {
+        "field": "robust_deviation"
+      },
+      {
+        "field": "elevated_signal",
+        "text_bool": true
+      },
+      {
+        "field": "strong_signal",
+        "text_bool": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+name: bibliometric-analyses
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12.14
+  - pip
+  - cairo
+  - libffi
+  - pip:
+      - -r requirements.txt

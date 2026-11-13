@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+title: "Bibliometric-Analyses: Institutional bibliometrics reproducibility (Ecuador, 2011-2025)"
+version: "1.0.0"
+date-released: "2026-11-13"
+license: MIT
+repository-code: "https://github.com/yunierkisperez/Bibliometric-Analyses"
+authors:
+  - family-names: "Pérez-Castillo"
+    given-names: "Yunierkis"
+    affiliation: "Universidad de Las Américas, Quito, Ecuador"
+keywords:
+  - bibliometrics
+  - research evaluation
+  - Scopus
+  - Ecuador

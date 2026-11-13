@@ -1,0 +1,22 @@
+[
+  {
+    "afid": "99000001",
+    "institution_id": "EXAMPLE_01",
+    "name": "Fictitious University 01"
+  },
+  {
+    "afid": "99000004",
+    "institution_id": "EXAMPLE_01",
+    "name": "Fictitious University 01"
+  },
+  {
+    "afid": "99000002",
+    "institution_id": "EXAMPLE_02",
+    "name": "Fictitious University 02"
+  },
+  {
+    "afid": "99000003",
+    "institution_id": "EXAMPLE_03",
+    "name": "Fictitious University 03"
+  }
+]

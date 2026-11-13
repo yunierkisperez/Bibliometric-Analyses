@@ -1,0 +1,35 @@
+{
+  "family": "Source Sans 3",
+  "version": "3.052",
+  "license": "OFL-1.1",
+  "upstream_repository": "https://github.com/adobe-fonts/source-sans",
+  "upstream_tag": "3.052R",
+  "upstream_commit": "ed1808970eb3c7301c9a523bee26473ba0bb62fa",
+  "faces": {
+    "regular": "SourceSans3-Regular.ttf",
+    "semibold": "SourceSans3-Semibold.ttf",
+    "bold": "SourceSans3-Bold.ttf"
+  },
+  "files": {
+    "LICENSE.md": {
+      "source_path": "LICENSE.md",
+      "sha256": "89ad2c4f66dd29127527493e729c31e731f111cf10faf5774c3db9275ed0c22c",
+      "bytes": 4579
+    },
+    "SourceSans3-Regular.ttf": {
+      "source_path": "TTF/SourceSans3-Regular.ttf",
+      "sha256": "4644c81b86ec9caaa76b634889968ed3c4f4f52f054855933acc7c2b21e53b0f",
+      "bytes": 431196
+    },
+    "SourceSans3-Semibold.ttf": {
+      "source_path": "TTF/SourceSans3-Semibold.ttf",
+      "sha256": "a3f4f8dcf343a8f24dc61951de93f3ba1558b15cd250ba24af8a40e957081b7d",
+      "bytes": 425904
+    },
+    "SourceSans3-Bold.ttf": {
+      "source_path": "TTF/SourceSans3-Bold.ttf",
+      "sha256": "9214b9d95e4231c609802815c2646c98174e2102d0d37f88978a7f8e71006e6a",
+      "bytes": 428176
+    }
+  }
+}
