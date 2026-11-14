@@ -1,7 +1,7 @@
 {
   "1": {
     "filename": "Table-S1.xlsx",
-    "sheet": "Table-S1",
+    "sheet": "Table S1",
     "headers": [
       "Institution",
       "Year",
@@ -34,7 +34,7 @@
   },
   "2": {
     "filename": "Table-S2.xlsx",
-    "sheet": "figure2_robust_d_temporal_expos",
+    "sheet": "Table S2",
     "headers": [
       "Institution",
       "Year",
@@ -127,7 +127,7 @@
   },
   "4": {
     "filename": "Table-S4.xlsx",
-    "sheet": "Hoja1",
+    "sheet": "Table S4",
     "headers": [
       "Manuscript code",
       "Interval",
@@ -244,7 +244,7 @@
   },
   "6": {
     "filename": "Table-S6.xlsx",
-    "sheet": "Table S4",
+    "sheet": "Table S6",
     "headers": [
       "Institution",
       "Phase",
@@ -583,7 +583,7 @@
   },
   "12": {
     "filename": "Table-S12.xlsx",
-    "sheet": "Table_S12_pairwise_dependencies",
+    "sheet": "Table S12",
     "headers": [
       "Year",
       "Institution",
@@ -721,7 +721,7 @@
   },
   "15": {
     "filename": "Table-S15.xlsx",
-    "sheet": "Figure7_institution_year_exposu",
+    "sheet": "Table S15",
     "headers": [
       "Year",
       "Institution",
