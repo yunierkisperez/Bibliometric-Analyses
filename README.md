@@ -111,6 +111,9 @@ licence boundaries are described in [LICENSE_SCOPE.md](LICENSE_SCOPE.md).
 
 ## Software citation and licensing
 
-See [CITATION.md](CITATION.md) for available software citation information and
-[LICENSE_SCOPE.md](LICENSE_SCOPE.md) for licensing status. No code licence or
-software author list is specified. Bundled fonts retain their OFL-1.1 licence.
+The code is released under the MIT License; see [LICENSE](LICENSE). Cite the
+software as described in [CITATION.md](CITATION.md) or with the metadata in
+`CITATION.cff`. The archived software has the concept DOI
+[10.5281/zenodo.24207837](https://doi.org/10.5281/zenodo.24207837).
+[LICENSE_SCOPE.md](LICENSE_SCOPE.md) describes what the licence covers. Bundled
+fonts retain their OFL-1.1 licence.

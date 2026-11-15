@@ -9,8 +9,10 @@
     "Yunierkis Pérez-Castillo"
   ],
   "release_date": "2026-11-13",
-  "version_doi": null,
-  "publication_metadata_complete": false,
+  "version_doi": "10.5281/zenodo.24207838",
+  "concept_doi": "10.5281/zenodo.24207837",
+  "doi_note": "The concept DOI identifies all archived versions and resolves to the latest one; the version DOI identifies this version.",
+  "publication_metadata_complete": true,
   "font_family": "Source Sans 3",
   "font_license": "OFL-1.1",
   "font_manifest": "assets/fonts/source_sans_3/font_manifest.json",

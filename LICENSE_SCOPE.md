@@ -1,9 +1,10 @@
 # Licence scope
 
-No code licence or copyright holder is specified in this distribution. This
-notice does not grant a code reuse licence. Software authorship and licensing
-status are recorded in `PUBLICATION_MANIFEST.json`; see `CITATION.md` for the
-available citation information.
+The Python code and documentation in this distribution are released under the
+MIT License; see `LICENSE`. The copyright holder is Yunierkis Pérez-Castillo.
+Software authorship and licensing are also recorded in
+`PUBLICATION_MANIFEST.json` and `CITATION.cff`; see `CITATION.md` for the
+software citation.
 
 The bundled Source Sans 3 fonts retain SIL Open Font License 1.1, including
 upstream notices and Reserved Font Name conditions in
