@@ -32,6 +32,12 @@ python reproduce_figure_3.py \
 Use `--source-format csv` for CSV input. Table filenames, sheet names, column
 order, identifiers and stored numerical precision must be preserved.
 
+Each workbook holds the data sheet, named `Table S1` to `Table S15`, optionally
+followed by a text-only `Legend` sheet with the table title, the meaning of
+every column, abbreviations and notes. The figure scripts read the data sheet
+and accept the workbook with or without the legend; any other sheet layout is
+rejected.
+
 ## Tables required by each figure
 
 These are the complete input sets for `--tables-dir`. Download only the tables
@@ -66,7 +72,7 @@ by the JSON workflow; they are not direct inputs to these figure scripts.
 Figures include vector PDF and SVG, a text-editable SVG companion, a PNG preview
 and execution reports. Source Sans 3 fonts are included. Table generation
 preserves the article's Excel sheets, columns, identifiers, formulas and number
-formats and also exports CSV versions.
+formats, adds the `Legend` sheet and also exports CSV versions.
 
 The JSON workflow supports tables only, figures only, or both. It also supports
 individual figures and selected tables. See [USAGE.md](USAGE.md) for commands

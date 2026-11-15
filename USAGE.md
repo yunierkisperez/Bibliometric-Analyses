@@ -41,6 +41,18 @@ Preserve filenames, workbook sheets, column order, anonymous codes and full
 stored numerical precision. Exporting a sheet to CSV must preserve its values
 and headers; changing an Excel filename extension does not convert the file.
 
+A workbook may carry a second, text-only sheet named `Legend` after the data
+sheet. It is ignored when figures are rendered. To add it to existing workbooks
+without rewriting the data sheet, write copies to a new folder:
+
+```bash
+python tools/add_table_legends.py \
+  --tables-dir /absolute/path/to/article_tables \
+  --output-dir /absolute/path/to/new/article_tables_with_legend
+```
+
+The legend text is defined in `config/table_legends.json`.
+
 Figure 6 requires only S13. Figure S9 requires S13 and S14. Figure S1 uses the
 `IMFA or EC-CIS` metric in S2, which represents the union of the two conditions.
 The union count cannot be obtained by adding their separate counts.
@@ -185,7 +197,8 @@ python export_tables.py \
 ```
 
 Outputs are `Table-S1.xlsx` through `Table-S15.xlsx`, corresponding CSV files,
-`Main-Table1.csv` and a build report. No figures are rendered. To exclude
+`Main-Table1.csv` and a build report. Each workbook includes the `Legend`
+sheet unless `--no-legend` is given. No figures are rendered. To exclude
 main-text Table 1, replace `all` with
 `S1 S2 S3 S4 S5 S6 S7 S8 S9 S10 S11 S12 S13 S14 S15`.
 

@@ -16,7 +16,7 @@ JSON_FILES = {
     'config/palette.json', 'config/inputs.example.json',
     'config/institutions.example.json', 'designs/layout.json', 'assets/fonts/source_sans_3/font_manifest.json',
     'PUBLICATION_MANIFEST.json',
-    'config/annual_outputs.json',
+    'config/annual_outputs.json', 'config/table_legends.json',
 }
 FORBIDDEN_EXTENSIONS = {'.xlsx', '.xls', '.tif', '.tiff', '.pdf', '.png', '.jpg', '.jpeg',
     '.zip', '.tar', '.gz', '.bz2', '.jsonl', '.ndjson', '.parquet', '.feather', '.pkl',

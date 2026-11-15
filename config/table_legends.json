@@ -1,0 +1,1299 @@
+{
+  "sheet": "Legend",
+  "abbreviations": {
+    "IMFA": "Institution-linked multi-affiliated output: publications in which at least one author affiliated with the university lists at least one additional affiliation on the same publication.",
+    "EC-CIS": "Ecuador cross-institution signer output: publications signed with the university by an author who, in the same year, has another publication in the Ecuador-wide corpus on which their own affiliations exclude that university. Labelled \"CIS\" or \"CIS-EC\" in some files.",
+    "HPA": "Hyperprolific-author-dependent output: publications that include at least one author with 25 or more publications attributed to the university in that year.",
+    "HAO": "Hyper-authored output: publications with 100 or more distinct Scopus Author IDs.",
+    "NLO": "Non-led output: publications with a classifiable corresponding-author affiliation and no corresponding author affiliated with the university. Labelled \"non-lead\" in some files.",
+    "CA known": "Publications with at least one mappable corresponding-author affiliation; the denominator of NLO. Labelled \"classifiable corresponding author\" in some files.",
+    "HPA-MFA/EC-CIS": "Publications signed by hyperprolific authors who are also multi-affiliated (MFA) or cross-institution signers. Labelled \"HPA-MFA/CIS\" or \"HPA_MFA_or_CIS_articles\" in some files.",
+    "IMFA or EC-CIS": "Publications that are IMFA, EC-CIS or both.",
+    "CTA-1, CTA-5, CTA-10": "Share of a university's publications signed by at least one of its 1, 5 or 10 most productive authors, counting each publication once. Labelled \"CTA 1\", \"CTA 5\" and \"CTA 10\" in the files.",
+    "A Top-50%": "Smallest number of top-ranked authors whose publications jointly cover at least 50% of the university's output. Labelled \"A top 50%\" or \"A_top50\" in the files.",
+    "Top-1, Top-5": "Share of the relevant publications linked to the leading partner affiliation or to the five leading partner affiliations. Labelled \"top partner\" and \"top-5 partners\" in the files."
+  },
+  "notes": {
+    "codes": {
+      "label": "Institution codes",
+      "text": "Universities are identified by the codes U-01 to U-30, which are the same in the article and in all supplementary files."
+    },
+    "aggregate": {
+      "label": "30-university aggregate",
+      "text": "The 30-university aggregate, labelled \"National\" in the files, is the deduplicated union of the publications attributed to at least one of the 30 universities. It is not a national total."
+    },
+    "partner_codes": {
+      "label": "Partner codes",
+      "text": "Codes beginning with N- denote Ecuadorian affiliation entities outside the 30 universities."
+    },
+    "blank": {
+      "label": "Blank cells",
+      "text": "A blank cell means that the value is undefined or that the institution-year was not eligible."
+    },
+    "d": {
+      "label": "Robust deviation (D)",
+      "text": "D = (x − median) / (IQR / 1.349), where x is the value of a university and the median and the interquartile range (IQR) are taken across the eligible universities in the same year or interval, excluding the 30-university aggregate. Eligibility requires at least 50 publications in the relevant denominator. A valid reference requires at least eight universities, two distinct values and a positive IQR. Elevated upper signal: D ≥ 2. Strong upper signal: D ≥ 3, labelled \"extreme\" in Tables S2, S3 and S7. Lower deviation: D ≤ −2. For HPA, HAO and HPA-MFA/EC-CIS, references use positive values only and lower deviations are not classified. D is descriptive; it is not a probability or a diagnostic test."
+    },
+    "phases": {
+      "label": "Study phases",
+      "text": "The expansion phase runs from 2011 to 2018 and the slower-growth phase from 2018 to 2025. Annual transitions are grouped by their end year: 2012–2018 and 2019–2025. \"Stabilization\" in the files denotes the slower-growth phase."
+    },
+    "interpretation": {
+      "label": "Interpretation",
+      "text": "The indicators describe bibliographic patterns of affiliation, authorship and concentration. A signal marks a deviation from the reference distribution of universities; it does not establish false affiliation, invalid authorship or misconduct."
+    },
+    "source": {
+      "label": "Data source",
+      "text": "Results calculated from Scopus records (Elsevier), retrieved through the Scopus API via http://api.elsevier.com and http://www.scopus.com. The retrieval dates are given in the Data availability statement of the article."
+    }
+  },
+  "tables": {
+    "1": {
+      "title": "Attributed output and year-on-year growth by university, 2011–2025",
+      "description": "One row per university and year, plus the 30-university aggregate. D is not calculated for the aggregate. Data for Figure 1.",
+      "columns": [
+        {
+          "columns": [
+            1
+          ],
+          "description": "University code, or \"National\" for the 30-university aggregate"
+        },
+        {
+          "columns": [
+            2
+          ],
+          "description": "Publication year"
+        },
+        {
+          "columns": [
+            3
+          ],
+          "description": "Unique publications attributed to the university in that year; blank when there were none"
+        },
+        {
+          "columns": [
+            4
+          ],
+          "description": "Change in attributed publications relative to the previous year, in percent"
+        },
+        {
+          "columns": [
+            5
+          ],
+          "description": "Robust deviation of annual growth, calculated when the university had at least 50 publications in the preceding year and the annual reference was valid"
+        },
+        {
+          "columns": [
+            6
+          ],
+          "description": "\"upper\" for D ≥ 2 and \"lower\" for D ≤ −2; blank otherwise"
+        },
+        {
+          "columns": [
+            7
+          ],
+          "description": "\"elevated\" for an absolute D of at least 2 and below 3; \"strong\" for an absolute D of at least 3"
+        }
+      ],
+      "abbreviations": [],
+      "notes": [
+        "codes",
+        "aggregate",
+        "blank",
+        "d",
+        "interpretation",
+        "source"
+      ]
+    },
+    "2": {
+      "title": "Exposure indicators by university and year, 2011–2025",
+      "description": "One row per university or aggregate, year and indicator, for institution-years with attributed output. Data for Figure 2 and Figure S1.",
+      "columns": [
+        {
+          "columns": [
+            1
+          ],
+          "description": "University code, or \"National\" for the 30-university aggregate"
+        },
+        {
+          "columns": [
+            2
+          ],
+          "description": "Publication year"
+        },
+        {
+          "columns": [
+            3
+          ],
+          "description": "IMFA, EC-CIS, HPA, HAO, NLO, \"HPA_MFA_or_CIS_articles\" (HPA-MFA/EC-CIS output dependence) or \"IMFA or EC-CIS\""
+        },
+        {
+          "columns": [
+            4
+          ],
+          "description": "\"N articles attributed\" for all indicators except NLO, which uses \"CA known\""
+        },
+        {
+          "columns": [
+            5
+          ],
+          "description": "Indicator-positive publications"
+        },
+        {
+          "columns": [
+            6
+          ],
+          "description": "Number of publications in the denominator"
+        },
+        {
+          "columns": [
+            7
+          ],
+          "description": "N articles with signal divided by the denominator value (proportion)"
+        },
+        {
+          "columns": [
+            8
+          ],
+          "description": "Robust deviation of the signal rate, calculated when the denominator had at least 50 publications and the annual reference was valid; not calculated for the aggregate"
+        },
+        {
+          "columns": [
+            9
+          ],
+          "description": "\"upper\" for D ≥ 2 and \"lower\" for D ≤ −2; blank otherwise"
+        },
+        {
+          "columns": [
+            10
+          ],
+          "description": "\"elevated\" or \"extreme\"; \"extreme\" is the strong level, an absolute D of at least 3"
+        }
+      ],
+      "abbreviations": [
+        "IMFA",
+        "EC-CIS",
+        "HPA",
+        "HAO",
+        "NLO",
+        "CA known",
+        "HPA-MFA/EC-CIS",
+        "IMFA or EC-CIS"
+      ],
+      "notes": [
+        "codes",
+        "aggregate",
+        "blank",
+        "d",
+        "interpretation",
+        "source"
+      ]
+    },
+    "3": {
+      "title": "Recurrence of robust deviations across the six Figure 2 indicators",
+      "description": "One row per university and indicator for the universities with at least two deviation years in at least one indicator. Data for Figure S2.",
+      "columns": [
+        {
+          "columns": [
+            1
+          ],
+          "description": "University code"
+        },
+        {
+          "columns": [
+            2
+          ],
+          "description": "IMFA, EC-CIS, HPA, HAO, NLO or HPA-MFA/EC-CIS output dependency"
+        },
+        {
+          "columns": [
+            3
+          ],
+          "description": "Years with D ≥ 2 or D ≤ −2"
+        },
+        {
+          "columns": [
+            4
+          ],
+          "description": "Years with D ≤ −2"
+        },
+        {
+          "columns": [
+            5
+          ],
+          "description": "Years with D ≥ 2"
+        },
+        {
+          "columns": [
+            6
+          ],
+          "description": "Years with an absolute D of at least 3"
+        },
+        {
+          "columns": [
+            7,
+            8
+          ],
+          "description": "First and last year with a deviation; blank when there was none"
+        },
+        {
+          "columns": [
+            9
+          ],
+          "description": "Median of the signed D values of the deviation years"
+        },
+        {
+          "columns": [
+            10
+          ],
+          "description": "Largest absolute D among the deviation years"
+        },
+        {
+          "columns": [
+            11
+          ],
+          "description": "Median difference between the university rate and the rate of the 30-university aggregate in the deviation years"
+        },
+        {
+          "columns": [
+            12
+          ],
+          "description": "Largest absolute difference from the aggregate rate in the deviation years"
+        },
+        {
+          "columns": [
+            13
+          ],
+          "description": "Years with a deviation, separated by semicolons"
+        }
+      ],
+      "abbreviations": [
+        "IMFA",
+        "EC-CIS",
+        "HPA",
+        "HAO",
+        "NLO",
+        "HPA-MFA/EC-CIS"
+      ],
+      "notes": [
+        "codes",
+        "aggregate",
+        "d",
+        "interpretation",
+        "source"
+      ]
+    },
+    "4": {
+      "title": "Three-state accounting of NLO and of the five-indicator union in the 30-university aggregate",
+      "description": "One row per classification and interval: the two study phases and the 14 annual transitions. NLO can be assessed only for publications with a classifiable corresponding-author affiliation, so publications are split into positive, confirmed negative and unknown.",
+      "columns": [
+        {
+          "columns": [
+            1
+          ],
+          "description": "\"National\", the 30-university aggregate"
+        },
+        {
+          "columns": [
+            2
+          ],
+          "description": "\"phase_endpoint\" for 2011–2018 and 2018–2025; \"annual_transition\" for consecutive years"
+        },
+        {
+          "columns": [
+            3
+          ],
+          "description": "Start and end year of the interval"
+        },
+        {
+          "columns": [
+            4
+          ],
+          "description": "\"NLO\", or \"union_of_five_indicators\" for publications positive for at least one of IMFA, EC-CIS, HPA, HAO and NLO"
+        },
+        {
+          "columns": [
+            5,
+            6
+          ],
+          "description": "Publications positive for the classification in the start and end year"
+        },
+        {
+          "columns": [
+            7,
+            8
+          ],
+          "description": "Publications with a classifiable corresponding-author affiliation that are negative for the classification"
+        },
+        {
+          "columns": [
+            9,
+            10
+          ],
+          "description": "Publications whose corresponding-author affiliation is unknown and, for the union, that are negative for the other four indicators"
+        },
+        {
+          "columns": [
+            11,
+            12
+          ],
+          "description": "Attributed publications; the three states sum to N"
+        },
+        {
+          "columns": [
+            13,
+            14
+          ],
+          "description": "Percentage of attributed publications with a classifiable corresponding-author affiliation"
+        },
+        {
+          "columns": [
+            15,
+            16
+          ],
+          "description": "For NLO, positive publications as a percentage of classifiable publications; for the union, positive publications as a percentage of all attributed publications"
+        }
+      ],
+      "abbreviations": [
+        "IMFA",
+        "EC-CIS",
+        "HPA",
+        "HAO",
+        "NLO",
+        "CA known"
+      ],
+      "notes": [
+        "aggregate",
+        "phases",
+        "source"
+      ]
+    },
+    "5": {
+      "title": "Decomposition of output change in the 30-university aggregate by indicator",
+      "description": "One row per accounting category and interval. For NLO and the five-indicator union, remaining output includes publications with an unknown corresponding-author affiliation; Table S4 separates them. Data for Figure 3 and Figure S3.",
+      "columns": [
+        {
+          "columns": [
+            1
+          ],
+          "description": "\"Expansion (2012-2018)\" or \"Stabilization (2019-2025)\", assigned by the end year of the interval; \"Stabilization\" is the slower-growth phase"
+        },
+        {
+          "columns": [
+            2
+          ],
+          "description": "Start and end year: the two phases (2011-2018 and 2018-2025) and the 14 annual transitions"
+        },
+        {
+          "columns": [
+            3
+          ],
+          "description": "\"At least one indicator\" (five-indicator union), \"At least one, excluding NLO\" (four-indicator union), IMFA, CIS (EC-CIS), HPA, HAO, NLO or HPA-MFA/CIS (HPA-MFA/EC-CIS output dependence)"
+        },
+        {
+          "columns": [
+            4,
+            5
+          ],
+          "description": "Attributed publications in the start and end year"
+        },
+        {
+          "columns": [
+            6,
+            7
+          ],
+          "description": "Indicator-positive publications"
+        },
+        {
+          "columns": [
+            8,
+            9
+          ],
+          "description": "Remaining publications, N minus E"
+        },
+        {
+          "columns": [
+            10,
+            11,
+            12
+          ],
+          "description": "Change between the start and end year; ΔN equals ΔE plus ΔU"
+        },
+        {
+          "columns": [
+            13,
+            14
+          ],
+          "description": "E divided by N in the start and end year (proportion)"
+        },
+        {
+          "columns": [
+            15
+          ],
+          "description": "ΔE divided by ΔN (proportion); values above 1 or below 0 mean that indicator-positive and remaining output moved in opposite directions"
+        }
+      ],
+      "abbreviations": [
+        "IMFA",
+        "EC-CIS",
+        "HPA",
+        "HAO",
+        "NLO",
+        "HPA-MFA/EC-CIS"
+      ],
+      "notes": [
+        "aggregate",
+        "phases",
+        "interpretation",
+        "source"
+      ]
+    },
+    "6": {
+      "title": "Decomposition of output change by university and indicator, with robust screening of rate changes",
+      "description": "One row per university, accounting category and interval. Rate changes were screened when both years had at least 50 publications in the relevant denominator. For HPA, HAO and HPA-MFA/EC-CIS, reference transitions required a positive numerator in at least one of the two years. Data for Table 1 and Figures S4 and S5.",
+      "columns": [
+        {
+          "columns": [
+            1
+          ],
+          "description": "University code"
+        },
+        {
+          "columns": [
+            2
+          ],
+          "description": "\"Expansion (2012-2018)\" or \"Stabilization (2019-2025)\", assigned by the end year of the interval; \"Stabilization\" is the slower-growth phase"
+        },
+        {
+          "columns": [
+            3
+          ],
+          "description": "Start and end year: the two phases (2011-2018 and 2018-2025) and the 14 annual transitions"
+        },
+        {
+          "columns": [
+            4
+          ],
+          "description": "\"At least one indicator\" (five-indicator union), \"At least one, excluding NLO\" (four-indicator union), IMFA, CIS (EC-CIS), HPA, HAO, NLO or HPA-MFA/CIS (HPA-MFA/EC-CIS output dependence)"
+        },
+        {
+          "columns": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "description": "Attributed, indicator-positive and remaining publications of the university in the start and end year"
+        },
+        {
+          "columns": [
+            11,
+            12,
+            13
+          ],
+          "description": "Change between the start and end year"
+        },
+        {
+          "columns": [
+            14,
+            15
+          ],
+          "description": "E divided by N in the start and end year (proportion); blank when N is zero"
+        },
+        {
+          "columns": [
+            16
+          ],
+          "description": "ΔE divided by ΔN (proportion); blank when ΔN is zero"
+        },
+        {
+          "columns": [
+            17
+          ],
+          "description": "Final share minus initial share, in percentage points; for NLO, the change in the rate among classifiable publications"
+        },
+        {
+          "columns": [
+            18,
+            19
+          ],
+          "description": "Median and scale (interquartile range divided by 1.349) of the rate changes of eligible universities in the same interval"
+        },
+        {
+          "columns": [
+            20
+          ],
+          "description": "Number of universities in the reference"
+        },
+        {
+          "columns": [
+            21
+          ],
+          "description": "\"valid\", or \"insufficient_reference_n\" when fewer than eight universities were available"
+        },
+        {
+          "columns": [
+            22
+          ],
+          "description": "Robust deviation of the rate change; blank when not evaluated"
+        },
+        {
+          "columns": [
+            23
+          ],
+          "description": "\"upper\" for D ≥ 2, \"lower\" for D ≤ −2, \"none\" otherwise, or \"not_evaluated\""
+        },
+        {
+          "columns": [
+            24
+          ],
+          "description": "\"elevated\", \"strong\" (absolute D of at least 3), \"none\" or \"not_evaluated\""
+        }
+      ],
+      "abbreviations": [
+        "IMFA",
+        "EC-CIS",
+        "HPA",
+        "HAO",
+        "NLO",
+        "HPA-MFA/EC-CIS"
+      ],
+      "notes": [
+        "codes",
+        "phases",
+        "blank",
+        "d",
+        "interpretation",
+        "source"
+      ]
+    },
+    "7": {
+      "title": "Concentration of output among leading authors by university and year",
+      "description": "One row per university or aggregate and year with attributed output. D values require at least 50 attributed publications and a valid annual reference. Data for Figure 4.",
+      "columns": [
+        {
+          "columns": [
+            1
+          ],
+          "description": "University code, or \"National\" for the 30-university aggregate"
+        },
+        {
+          "columns": [
+            2
+          ],
+          "description": "Publication year"
+        },
+        {
+          "columns": [
+            3
+          ],
+          "description": "Unique publications attributed to the university"
+        },
+        {
+          "columns": [
+            4
+          ],
+          "description": "Distinct authors affiliated with the university on those publications"
+        },
+        {
+          "columns": [
+            5,
+            6,
+            7
+          ],
+          "description": "Proportion of the university's publications signed by at least one of its 1, 5 or 10 most productive authors"
+        },
+        {
+          "columns": [
+            8
+          ],
+          "description": "Smallest number of top-ranked authors whose publications cover at least 50% of output; blank for the aggregate"
+        },
+        {
+          "columns": [
+            9
+          ],
+          "description": "Authors with 25 or more publications attributed to the university in that year; blank for the aggregate"
+        },
+        {
+          "columns": [
+            10
+          ],
+          "description": "Proportion of publications that include at least one hyperprolific author; blank for the aggregate"
+        },
+        {
+          "columns": [
+            11
+          ],
+          "description": "Hyperprolific authors who were also multi-affiliated or cross-institution signers; blank for the aggregate"
+        },
+        {
+          "columns": [
+            12
+          ],
+          "description": "Robust deviation of A top 50%, with the sign reversed so that positive values denote fewer authors and greater concentration"
+        },
+        {
+          "columns": [
+            13,
+            14,
+            15
+          ],
+          "description": "Robust deviations of CTA 1, CTA 10 and CTA 5"
+        },
+        {
+          "columns": [
+            16,
+            17,
+            18
+          ],
+          "description": "\"elevated\" for D ≥ 2 or \"extreme\" for D ≥ 3; blank otherwise"
+        }
+      ],
+      "abbreviations": [
+        "CTA-1, CTA-5, CTA-10",
+        "A Top-50%",
+        "HPA"
+      ],
+      "notes": [
+        "codes",
+        "aggregate",
+        "blank",
+        "d",
+        "interpretation",
+        "source"
+      ]
+    },
+    "8": {
+      "title": "Cumulative publication coverage by author rank in four universities, 2025",
+      "description": "One row per author rank for each of the four universities shown in Figure S6, from rank 1 to the rank that reaches 50% coverage. Authors are identified only by rank. Data for Figure S6.",
+      "columns": [
+        {
+          "columns": [
+            1
+          ],
+          "description": "University code"
+        },
+        {
+          "columns": [
+            2
+          ],
+          "description": "2025"
+        },
+        {
+          "columns": [
+            3
+          ],
+          "description": "Rank of the author by number of publications attributed to the university; 1 is the most productive"
+        },
+        {
+          "columns": [
+            4
+          ],
+          "description": "Distinct publications signed by at least one author up to that rank"
+        },
+        {
+          "columns": [
+            5
+          ],
+          "description": "Cumulative article count divided by Output (proportion)"
+        },
+        {
+          "columns": [
+            6
+          ],
+          "description": "Smallest number of top-ranked authors that covers at least 50% of output"
+        },
+        {
+          "columns": [
+            7
+          ],
+          "description": "Publications attributed to the university in 2025"
+        }
+      ],
+      "abbreviations": [
+        "A Top-50%"
+      ],
+      "notes": [
+        "codes",
+        "source"
+      ]
+    },
+    "9": {
+      "title": "Leading-author persistence episodes",
+      "description": "One row per episode. An episode is a run of at least three consecutive years in which the same author ranked first by publications at a university with at least 50 attributed publications in each year. Authors tied for first place were retained. Rows are ordered by decreasing length and then by decreasing median CTA-1.",
+      "columns": [
+        {
+          "columns": [
+            1
+          ],
+          "description": "Sequential label of the row (EP-001, EP-002, and so on); it is not an author identifier"
+        },
+        {
+          "columns": [
+            2
+          ],
+          "description": "University code"
+        },
+        {
+          "columns": [
+            3,
+            4
+          ],
+          "description": "First and last year of the episode"
+        },
+        {
+          "columns": [
+            5
+          ],
+          "description": "Number of consecutive years in the episode"
+        },
+        {
+          "columns": [
+            6
+          ],
+          "description": "Median across the years of the episode of the percentage of the university's publications signed by its leading author"
+        },
+        {
+          "columns": [
+            7
+          ],
+          "description": "Years of the episode in which the leading author was hyperprolific"
+        },
+        {
+          "columns": [
+            8
+          ],
+          "description": "Years of the episode in which the leading author was hyperprolific and also multi-affiliated or a cross-institution signer"
+        }
+      ],
+      "abbreviations": [
+        "CTA-1, CTA-5, CTA-10",
+        "HPA"
+      ],
+      "notes": [
+        "codes",
+        "interpretation",
+        "source"
+      ]
+    },
+    "10": {
+      "title": "National sharing in the 30-university aggregate, 2011–2025",
+      "description": "One row per year. A publication is nationally shared when it lists at least two Ecuadorian affiliation entities. Sharing mechanisms are mutually exclusive and were assigned from author–affiliation links. Data for Figure 5.",
+      "columns": [
+        {
+          "columns": [
+            1
+          ],
+          "description": "Publication year"
+        },
+        {
+          "columns": [
+            2
+          ],
+          "description": "Unique publications attributed to at least one of the 30 universities"
+        },
+        {
+          "columns": [
+            3
+          ],
+          "description": "Nationally shared publications"
+        },
+        {
+          "columns": [
+            4
+          ],
+          "description": "Nationally shared publications as a percentage of the total"
+        },
+        {
+          "columns": [
+            5
+          ],
+          "description": "Publications attributed to two or more of the 30 universities"
+        },
+        {
+          "columns": [
+            6
+          ],
+          "description": "Publications that also list an Ecuadorian entity outside the 30 universities"
+        },
+        {
+          "columns": [
+            7
+          ],
+          "description": "Shared publications whose additional Ecuadorian entities are all among the 30 universities"
+        },
+        {
+          "columns": [
+            8
+          ],
+          "description": "Shared publications whose additional Ecuadorian entities are all outside the 30 universities"
+        },
+        {
+          "columns": [
+            9
+          ],
+          "description": "Shared publications with both kinds of additional entity; the three columns sum to the shared total"
+        },
+        {
+          "columns": [
+            10
+          ],
+          "description": "Distinct-author sharing only: each entity is linked to at least one author who is not linked to the other"
+        },
+        {
+          "columns": [
+            11
+          ],
+          "description": "Same-author sharing only: at least one author is linked to both entities"
+        },
+        {
+          "columns": [
+            12
+          ],
+          "description": "Publications with both mechanisms"
+        },
+        {
+          "columns": [
+            13
+          ],
+          "description": "Shared publications with incomplete author–affiliation links; the four mechanism columns sum to the shared total"
+        }
+      ],
+      "abbreviations": [],
+      "notes": [
+        "aggregate",
+        "source"
+      ]
+    },
+    "11": {
+      "title": "National sharing and corresponding-author leadership by university and year",
+      "description": "One row per university and year with attributed output. Partners are Ecuadorian affiliation entities other than the university itself. Robust deviations require at least 50 attributed publications; the deviation of the non-led percentage also requires at least 20 shared publications with a classifiable corresponding-author affiliation. Data for Figure 5 and Figure S7.",
+      "columns": [
+        {
+          "columns": [
+            1
+          ],
+          "description": "Publication year"
+        },
+        {
+          "columns": [
+            2
+          ],
+          "description": "University code"
+        },
+        {
+          "columns": [
+            3
+          ],
+          "description": "Unique publications attributed to the university"
+        },
+        {
+          "columns": [
+            4
+          ],
+          "description": "Publications that list at least one other Ecuadorian affiliation entity"
+        },
+        {
+          "columns": [
+            5
+          ],
+          "description": "Shared publications as a percentage of attributed publications"
+        },
+        {
+          "columns": [
+            6
+          ],
+          "description": "Code of the Ecuadorian entity with which the university shared most publications: U- codes are focal universities and N- codes are other Ecuadorian entities; blank when there was none"
+        },
+        {
+          "columns": [
+            7
+          ],
+          "description": "\"focal university\", \"other Ecuadorian affiliation entity\" or \"none\""
+        },
+        {
+          "columns": [
+            8
+          ],
+          "description": "Publications shared with the leading partner"
+        },
+        {
+          "columns": [
+            9
+          ],
+          "description": "The same count as a percentage of attributed publications"
+        },
+        {
+          "columns": [
+            10
+          ],
+          "description": "Publications shared with at least one of the five leading partners, counted once"
+        },
+        {
+          "columns": [
+            11
+          ],
+          "description": "The same count as a percentage of attributed publications"
+        },
+        {
+          "columns": [
+            12
+          ],
+          "description": "Distinct Ecuadorian partner entities"
+        },
+        {
+          "columns": [
+            13
+          ],
+          "description": "Shared publications with a classifiable corresponding-author affiliation"
+        },
+        {
+          "columns": [
+            14
+          ],
+          "description": "Of those, publications with no corresponding author affiliated with the university"
+        },
+        {
+          "columns": [
+            15
+          ],
+          "description": "Non-led shared publications as a percentage of shared publications with a classifiable corresponding author"
+        },
+        {
+          "columns": [
+            16
+          ],
+          "description": "Publications without another Ecuadorian entity and with a classifiable corresponding-author affiliation"
+        },
+        {
+          "columns": [
+            17
+          ],
+          "description": "Of those, publications with no corresponding author affiliated with the university"
+        },
+        {
+          "columns": [
+            18
+          ],
+          "description": "Robust deviation of Shared publications (%)"
+        },
+        {
+          "columns": [
+            19
+          ],
+          "description": "Robust deviation of the non-led percentage of shared publications"
+        }
+      ],
+      "abbreviations": [
+        "CA known"
+      ],
+      "notes": [
+        "codes",
+        "partner_codes",
+        "blank",
+        "d",
+        "interpretation",
+        "source"
+      ]
+    },
+    "12": {
+      "title": "Publications shared between pairs of the 30 universities, 2025",
+      "description": "One row per ordered pair of universities with at least one shared publication in 2025. Each pair appears twice, once in each direction, with the same number of shared publications and the attributed output of the university in the Institution column. Data for Figure S8, which plots Shared publications as a percentage of Attributed publications.",
+      "columns": [
+        {
+          "columns": [
+            1
+          ],
+          "description": "2025"
+        },
+        {
+          "columns": [
+            2
+          ],
+          "description": "Code of the source university"
+        },
+        {
+          "columns": [
+            3
+          ],
+          "description": "Code of the partner university"
+        },
+        {
+          "columns": [
+            4
+          ],
+          "description": "\"focal university\" in all rows"
+        },
+        {
+          "columns": [
+            5
+          ],
+          "description": "Publications attributed to the source university in 2025"
+        },
+        {
+          "columns": [
+            6
+          ],
+          "description": "Publications attributed to both universities"
+        }
+      ],
+      "abbreviations": [],
+      "notes": [
+        "codes",
+        "source"
+      ]
+    },
+    "13": {
+      "title": "Partner concentration underlying IMFA and EC-CIS by university and year",
+      "description": "One row per university or aggregate and year. An IMFA partner is an additional affiliation of a multi-affiliated author of the university on the same publication. An EC-CIS partner is an affiliation in the author's own links on an alternative publication, that is, a same-year publication in the Ecuador-wide corpus on which the author's affiliations exclude the university. Screening required at least 50 attributed publications and at least 10 signal-specific publications; D is not calculated for the aggregate. The four concentration columns hold proportions between 0 and 1, although their names contain a percent sign. Data for Figure 6 and Figures S9 and S10.",
+      "columns": [
+        {
+          "columns": [
+            1
+          ],
+          "description": "Publication year"
+        },
+        {
+          "columns": [
+            2
+          ],
+          "description": "University code, or \"National\" for the 30-university aggregate"
+        },
+        {
+          "columns": [
+            3
+          ],
+          "description": "Unique publications attributed to the university"
+        },
+        {
+          "columns": [
+            4
+          ],
+          "description": "IMFA publications; the denominator of the IMFA concentration measures"
+        },
+        {
+          "columns": [
+            5
+          ],
+          "description": "IMFA publications linked to the leading additional affiliation"
+        },
+        {
+          "columns": [
+            6
+          ],
+          "description": "IMFA Top-1: the previous column divided by N IMFA publications"
+        },
+        {
+          "columns": [
+            7
+          ],
+          "description": "IMFA publications linked to at least one of the five leading additional affiliations, counted once"
+        },
+        {
+          "columns": [
+            8
+          ],
+          "description": "IMFA Top-5: the previous column divided by N IMFA publications"
+        },
+        {
+          "columns": [
+            9
+          ],
+          "description": "Union of the alternative publications of the university's EC-CIS authors; the denominator of the EC-CIS concentration measures"
+        },
+        {
+          "columns": [
+            10
+          ],
+          "description": "Alternative publications linked to the leading partner"
+        },
+        {
+          "columns": [
+            11
+          ],
+          "description": "The previous column divided by the alternative-publication union"
+        },
+        {
+          "columns": [
+            12
+          ],
+          "description": "Alternative publications linked to at least one of the five leading partners, counted once"
+        },
+        {
+          "columns": [
+            13
+          ],
+          "description": "The previous column divided by the alternative-publication union"
+        },
+        {
+          "columns": [
+            14,
+            15
+          ],
+          "description": "Robust deviations of IMFA Top-1 and EC-CIS Top-1"
+        },
+        {
+          "columns": [
+            16,
+            17
+          ],
+          "description": "Robust deviations of IMFA Top-5 and EC-CIS Top-5"
+        }
+      ],
+      "abbreviations": [
+        "IMFA",
+        "EC-CIS",
+        "Top-1, Top-5"
+      ],
+      "notes": [
+        "codes",
+        "aggregate",
+        "blank",
+        "d",
+        "interpretation",
+        "source"
+      ]
+    },
+    "14": {
+      "title": "Overlap between IMFA and EC-CIS partner structures and recurrence of EC-CIS partners, 2025",
+      "description": "One row per university and for the 30-university aggregate. In the column names, \"institutions\" are partner affiliations and \"CIS-EC\" is EC-CIS. Data for Figure S9.",
+      "columns": [
+        {
+          "columns": [
+            1
+          ],
+          "description": "2025"
+        },
+        {
+          "columns": [
+            2
+          ],
+          "description": "University code, or \"National\" for the 30-university aggregate"
+        },
+        {
+          "columns": [
+            3
+          ],
+          "description": "Partner affiliations that appear both among the IMFA partners and among the EC-CIS partners of the university"
+        },
+        {
+          "columns": [
+            4
+          ],
+          "description": "Partner affiliations that appear in at least one of the two sets"
+        },
+        {
+          "columns": [
+            5
+          ],
+          "description": "Overlap of the two partner sets (Jaccard index)"
+        },
+        {
+          "columns": [
+            6
+          ],
+          "description": "Pairs of author and partner affiliation observed in both structures"
+        },
+        {
+          "columns": [
+            7
+          ],
+          "description": "Pairs of author and partner affiliation observed in at least one structure"
+        },
+        {
+          "columns": [
+            8
+          ],
+          "description": "Overlap of the two sets of pairs (Jaccard index)"
+        },
+        {
+          "columns": [
+            9
+          ],
+          "description": "EC-CIS authors of the university with at least two alternative publications and a resolved partner affiliation"
+        },
+        {
+          "columns": [
+            10
+          ],
+          "description": "Of those records, the number whose alternative publications involve a single partner affiliation"
+        },
+        {
+          "columns": [
+            11
+          ],
+          "description": "The previous column divided by the one before it; blank when there were no eligible records"
+        }
+      ],
+      "abbreviations": [
+        "IMFA",
+        "EC-CIS"
+      ],
+      "notes": [
+        "codes",
+        "aggregate",
+        "blank",
+        "source"
+      ]
+    },
+    "15": {
+      "title": "Robust deviations and signal classification for the five primary indicators",
+      "description": "One row per university, year and indicator for institution-years with attributed output. Data for Figure 7.",
+      "columns": [
+        {
+          "columns": [
+            1
+          ],
+          "description": "Publication year"
+        },
+        {
+          "columns": [
+            2
+          ],
+          "description": "University code"
+        },
+        {
+          "columns": [
+            3
+          ],
+          "description": "IMFA, CIS (EC-CIS), HPA, HAO or NLO"
+        },
+        {
+          "columns": [
+            4
+          ],
+          "description": "Robust deviation of the indicator rate, as in Table S2; blank when the institution-year was not evaluable"
+        },
+        {
+          "columns": [
+            5
+          ],
+          "description": "True when D ≥ 2"
+        },
+        {
+          "columns": [
+            6
+          ],
+          "description": "True when D ≥ 3"
+        }
+      ],
+      "abbreviations": [
+        "IMFA",
+        "EC-CIS",
+        "HPA",
+        "HAO",
+        "NLO"
+      ],
+      "notes": [
+        "codes",
+        "blank",
+        "d",
+        "interpretation",
+        "source"
+      ]
+    }
+  }
+}

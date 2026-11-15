@@ -222,6 +222,9 @@ marginal counts.
 
 export_tables.py writes selected Table-Sn.xlsx and Table-Sn.csv files using
 the sheet, header, type, number-format and formula contracts in config/.
+Each workbook has the data sheet followed by a text-only Legend sheet built
+from config/table_legends.json; --no-legend omits it. The legend holds the
+table title, column meanings, abbreviations and notes, and no data.
 Figure entry points can perform this export locally for their own products.
 With --tables-dir, only direct construction inputs are read and no table is
 copied or re-exported. With annual or calculated inputs, --figures-only builds

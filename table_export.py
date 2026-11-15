@@ -2,7 +2,8 @@
 
 No reference workbook or reference scientific value is used for calculation.
 XLSX serialization uses the Python standard library, including cached results
-for the six original expressions per row in Tables S5 and S6.
+for the six original expressions per row in Tables S5 and S6. Each workbook
+holds the data sheet and, by default, a second text-only "Legend" sheet.
 """
 from pathlib import Path
 import csv
@@ -12,6 +13,7 @@ import numbers
 from xml.sax.saxutils import escape
 from zipfile import ZipFile, ZIP_DEFLATED
 import pandas as pd
+from table_legends import add_legend, allowed_sheets
 
 ROOT = Path(__file__).resolve().parent
 SCHEMAS = json.loads((ROOT/'config/table_schemas.json').read_text())
@@ -49,7 +51,7 @@ def formula(n, col, row):
                 15:f'IF(K{row}=0,"",L{row}/K{row})'}.get(col)
 
 
-def write_xlsx(path, n, rows):
+def write_xlsx(path, n, rows, legend=True):
     spec = SCHEMAS[str(n)]
     formats = list(dict.fromkeys(spec['formats']))
     numeric_formats = ''.join(f'<numFmt numFmtId="{164+i}" formatCode="{escape(f, {chr(34): "&quot;"})}"/>' for i, f in enumerate(formats))
@@ -98,9 +100,10 @@ def write_xlsx(path, n, rows):
     }
     with ZipFile(path,'w',compression=ZIP_DEFLATED) as z:
         for name, text in parts.items():z.writestr(name,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'+text)
+    if legend:add_legend(path,path,n,spec['headers'])
 
 
-def build(generated, output, tables=None, include_main=None):
+def build(generated, output, tables=None, include_main=None, legend=True):
     generated=Path(generated);output=Path(output);output.mkdir(parents=True,exist_ok=True)
     selected=list(range(1,16)) if tables is None else sorted(set(tables))
     if any(n not in range(1,16) for n in selected):raise ValueError('Table numbers must be within 1-15')
@@ -154,7 +157,7 @@ def build(generated, output, tables=None, include_main=None):
         schema=SCHEMAS[str(n)]
         with (output/f'Table-S{n}.csv').open('w',newline='',encoding='utf-8-sig') as f:
             writer=csv.writer(f);writer.writerow(schema['headers']);writer.writerows(rows)
-        write_xlsx(output/schema['filename'],n,rows)
+        write_xlsx(output/schema['filename'],n,rows,legend)
         manifest.append({'table':n,'rows':len(rows),'columns':len(schema['headers'])})
     if include_main:
         if 6 in selected:
@@ -173,8 +176,8 @@ def read_table(folder, n, source_format='xlsx'):
     if source_format=='xlsx':
         import openpyxl
         wb=openpyxl.load_workbook(folder/spec['filename'],data_only=True,read_only=True)
-        if wb.sheetnames!=[spec['sheet']]:raise ValueError(f'Table S{n}: sheet name/order changed')
-        rows=list(wb.active.values);wb.close()
+        if wb.sheetnames not in allowed_sheets(spec['sheet']):raise ValueError(f'Table S{n}: sheet name/order changed')
+        rows=list(wb[spec['sheet']].values);wb.close()
         if not rows or list(rows[0])!=spec['headers']:raise ValueError(f'Table S{n}: columns changed')
         df=pd.DataFrame(rows[1:],columns=spec['headers'])
     else:

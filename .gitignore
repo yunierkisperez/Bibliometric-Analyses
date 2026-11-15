@@ -15,6 +15,7 @@ rep*/
 !config/retained_csv.json
 !config/persistence_id_registry.json
 !config/table_schemas.json
+!config/table_legends.json
 !config/palette.json
 !config/institutions.example.json
 !config/inputs.example.json

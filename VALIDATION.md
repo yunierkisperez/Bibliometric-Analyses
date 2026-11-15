@@ -46,7 +46,9 @@ are read only by this comparison command, not by the generation workflow.
 Main-text Table 1 requires a separate comparison of `Main-Table1.csv`.
 
 The comparison checks sheet order, dimensions, column order, identifiers,
-categories, value types, formulas, formula caches and number formats. Counts
+categories, value types, formulas, formula caches and number formats. The
+optional text-only `Legend` sheet is not compared; the report states whether
+each workbook has one. Counts
 and identifiers must agree exactly. Only the rate and robust-D columns listed
 in `table_validation.py` permit this numerical tolerance:
 

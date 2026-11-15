@@ -2,6 +2,7 @@
 from pathlib import Path
 import numbers
 import openpyxl
+from table_legends import LEGEND_SHEET, data_sheets
 
 FLOATS={1:[3,4],2:[6,7],3:[8,9,10,11],4:[12,13,14,15],5:[12,13,14],
         6:[13,14,15,16,17,18,21],7:[4,5,6,9,11,12,13,14],8:[4],9:[5],10:[3],
@@ -24,8 +25,11 @@ def validate_tables(reference, candidate, tables=None):
             results.append({'table':n,'pass':False,'differences':[{'kind':'missing_workbook'}]});continue
         old,new=[openpyxl.load_workbook(p,data_only=False) for p in paths]
         oc,nc=[openpyxl.load_workbook(p,data_only=True) for p in paths]
-        if old.sheetnames!=new.sheetnames:errors.append({'kind':'sheet_names_or_order'})
-        for a,b,ac,bc in zip(old,new,oc,nc):
+        # The optional text-only legend sheet is not a scientific value; data sheets are compared in order.
+        names=[data_sheets(w.sheetnames) for w in (old,new)]
+        if names[0]!=names[1]:errors.append({'kind':'sheet_names_or_order'})
+        for sa,sb in zip(*names):
+            a,b,ac,bc=old[sa],new[sb],oc[sa],nc[sb]
             if (a.max_row,a.max_column)!=(b.max_row,b.max_column):errors.append({'kind':'dimensions'})
             for ro,rn,vo,vn in zip(a,b,ac,bc):
                 for x,y,v,w in zip(ro,rn,vo,vn):
@@ -47,5 +51,6 @@ def validate_tables(reference, candidate, tables=None):
         results.append({'table':n,'pass':not errors and format_differences==0,'cells_checked':cells,'formula_cells':formulas,
                         'difference_count':len(errors),'differences':errors[:40],
                         'number_format_differences':format_differences,
+                        'legend_sheet':{'reference':LEGEND_SHEET in old.sheetnames,'candidate':LEGEND_SHEET in new.sheetnames},
                         'float_tolerance':'1e-12 + 5e-14*abs(reference), enumerated float columns only; counts and IDs exact'})
     return results
